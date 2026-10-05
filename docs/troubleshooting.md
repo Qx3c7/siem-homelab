@@ -24,10 +24,10 @@ Dodano drugą kartę sieciową w trybie NAT.
 
 ### Czego się nauczyłem
 
-Na początku nie wiedziałem, dlaczego `apt` nie działa. Sprawdziłem interfejsy za pomocą `ip a` . Po dodaniu NAT Ubuntu dostało adres IPv4, a następnie sprawdziłem trasę sieciową za pomocą `ip route`.
+Na początku nie wiedziałem, dlaczego `apt` nie działa. Sprawdziłem interfejsy za pomocą `ip a`. Po dodaniu NAT Ubuntu dostało adres IPv4, a następnie sprawdziłem trasę sieciową za pomocą `ip route`.
 
 
-## Ubuntu nie mógł pingować Windowsa
+## Ubuntu nie mógło pingować Windowsa
 
 ### Objaw
 
