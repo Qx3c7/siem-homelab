@@ -27,7 +27,7 @@ Dodano drugą kartę sieciową w trybie NAT.
 Na początku nie wiedziałem, dlaczego `apt` nie działa. Sprawdziłem interfejsy za pomocą `ip a`. Po dodaniu NAT Ubuntu dostało adres IPv4, a następnie sprawdziłem trasę sieciową za pomocą `ip route`.
 
 
-## Ubuntu nie mógło pingować Windowsa
+## Ubuntu nie mogło pingować Windowsa
 
 ### Objaw
 
@@ -58,11 +58,11 @@ Brak odpowiedzi na ping nie oznacza jednoznacznie, że pingowane urządzenie jes
 
 ### Objaw
 
-Dysk Ubuntu wykazuje rozmiar 11,5GB oraz 5,5GB wolnego miejsca 
+Dysk Ubuntu wykazuje rozmiar 11,5 GB oraz 5,5 GB wolnego miejsca 
 
 ### Diagnostyka
 
-Weryfikacja woluminu logicznego (LV) oraz grupy woluminów (VG) i porównanie ich. Wykazało to ze LV ma rozmiar 11,5GB  mimo że VG ma rozmiar 23GB.
+Weryfikacja woluminu logicznego (LV) oraz grupy woluminów (VG) i porównanie ich. Wykazało to, że LV ma rozmiar 11,5 GB  mimo że VG ma rozmiar 23 GB.
 
 ### Przyczyna
 
