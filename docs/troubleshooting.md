@@ -53,3 +53,31 @@ Włączenie reguły pozwalającej na odpowiedź na żądania ICMP Echo Request.
 ### Czego się nauczyłem
 
 Brak odpowiedzi na ping nie oznacza jednoznacznie, że pingowane urządzenie jest wyłączone albo nie jest podłączone do sieci. Komunikacja może być blokowana przez reguły firewalla dla konkretnego protokołu.
+
+## Ubuntu miało za mało miejsca na dysku 
+
+### Objaw
+
+Dysk Ubuntu wykazuje rozmiar 11,5GB oraz 5,5GB wolnego miejsca 
+
+### Diagnostyka
+
+Weryfikacja woluminu logicznego (LV) oraz grupy woluminów (VG) i porównanie ich. Wykazało to ze LV ma rozmiar 11,5GB  mimo że VG ma rozmiar 23GB.
+
+### Przyczyna
+
+Część miejsca nie została domyślnie przypisana do woluminu logicznego używanego przez system. 
+
+### Rozwiązanie
+
+Ręcznie zwiększono wielkość woluminu logicznego do wielkości grupy woluminów komendą 
+```text
+sudo lvextend -r -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+```
+
+### Czego się nauczyłem
+
+Mała ilość pokazanego miejsca nie zawsze świadczy o tym, że dysk jest zapełniony. W przypadku LVM część miejsca może być dostępna w grupie woluminów, ale nie przypisana do woluminu logicznego 
+
+
+
